@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Horario Madre de los Dolores</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f9; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        /* Ajustes para imagen a la izquierda y texto a la derecha */
+        .header-section { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; /* Centra todo el bloque en el contenedor */
+            gap: 20px; 
+            margin-bottom: 30px;
+        }
+        
+        .title-text { 
+            font-size: 1.8rem; 
+            font-weight: bold; 
+            color: #8e44ad;
+        }
+
+        .image-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* O quítalo si prefieres que sea cuadrada */
+            overflow: hidden;
+            border: 2px solid #8e44ad;
+            flex-shrink: 0; /* Evita que la imagen se deforme */
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 { text-align: center; color: #2c3e50; }
+        h2 { color: #34495e; border-bottom: 2px solid #34495e; padding-bottom: 10px; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 30px; }
+        th, td { border: 1px solid #ccc; padding: 12px; text-align: center; }
+        th { background-color: #34495e; color: white; }
+        td[contenteditable="true"]:hover { background-color: #fff9c4; cursor: pointer; border: 1px dashed #f1c40f; }
+        .hora { font-weight: bold; background: #ecf0f1; width: 30%; }
+        
+        .footer-note { 
+            margin-top: 30px; 
+            padding: 15px; 
+            border-top: 2px solid #eee; 
+            text-align: center; 
+            color: #555; 
+            font-style: italic; 
+        }
+
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; width: 100%; }
+            button { display: none; }
+        }
+        .btn-print { display: block; margin: 20px auto; padding: 12px 25px; cursor: pointer; background: #27ae60; color: white; border: none; border-radius: 5px; font-size: 18px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Imagen a la izquierda, Título a la derecha -->
+    <div class="header-section">
+        <div class="image-container">
+            <img src="dolores.jpg" alt="Logo">
+        </div>
+        <div class="title-text">Madre de los Dolores</div>
+    </div>
+
+    <h1>Horario de Grupos</h1>
+    <p style="text-align:center;"><em></em></p>
+
+    <h2>Sábado</h2>
+    <table>
+        <thead><tr><th>Horario (Editable)</th><th>Actividad / Grupo</th></tr></thead>
+        <tbody>
+            <tr><td class="hora" contenteditable="true">07:00 - 09:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">09:00 - 11:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">11:00 - 13:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">13:00 - 15:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">15:00 - 17:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">17:00 - 19:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">19:00 - 21:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">21:00 - 23:00</td><td contenteditable="true"></td></tr>
+        </tbody>
+    </table>
+
+    <h2>Domingo</h2>
+    <table>
+        <thead><tr><th>Horario (Editable)</th><th>Actividad / Grupo</th></tr></thead>
+        <tbody>
+            <tr><td class="hora" contenteditable="true">07:00 - 09:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">09:00 - 11:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">11:00 - 13:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">13:00 - 15:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">15:00 - 17:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">17:00 - 19:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">19:00 - 21:00</td><td contenteditable="true"></td></tr>
+            <tr><td class="hora" contenteditable="true">21:00 - 23:00</td><td contenteditable="true"></td></tr>
+        </tbody>
+    </table>
+    
+    <div class="footer-note" contenteditable="true">
+        Gracias a Dios por cada uno de ustedes. Que tengan abundantes bendiciones. ¡Gracias por su colaboración!
+    </div>
+    
+    <button class="btn-print" onclick="window.print()">Imprimir Horario Completo</button>
+</div>
+
+</body>
+</html>
